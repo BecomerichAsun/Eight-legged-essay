@@ -1,2 +1,3 @@
 # Eight-legged-essay
-IOS从头再来
+混了四年 发现自己啥也不是 
+o(╥﹏╥)o
