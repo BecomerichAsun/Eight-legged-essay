@@ -83,6 +83,7 @@
             return;
         }
     }
+    free(ivars);
     [self setValue:value forUndefinedKey:key];
 }
 
@@ -161,6 +162,7 @@
             return getKey;
         }
     }
+    free(ivars);
     [self valueForUndefinedKey:key];
     return getKey;
 }
