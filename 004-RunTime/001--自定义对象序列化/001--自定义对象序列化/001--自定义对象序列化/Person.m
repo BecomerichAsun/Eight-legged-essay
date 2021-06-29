@@ -19,13 +19,15 @@
 
 
 - (void)encodeWithCoder:(NSCoder *)coder {
+    /// 传递Int指针
+    /// c语言中 基本数据类型指针 如果作为参数传递 一般函数内部 是为了修改基本数据类型变量的值
     unsigned int count = 0;
+    /// 调用赋值类列表 此时Count指针会发生变化
     Ivar* ivarList = class_copyIvarList(self.class, &count);
     
     for (int i = 0; i < count; i++) {
-        //        取出当前类Key值
+        // 取出当前类Key值
         const char *ivarName = ivar_getName(ivarList[i]);
-        NSLog(@"%s",ivarName);
         NSString* key = [NSString stringWithUTF8String:ivarName];
         id value = [self valueForKey:key];
         [coder encodeObject:value forKey: key];
@@ -38,7 +40,7 @@
 {
     
     if (self = [super init]) {
-//        _name = [coder decodeObjectForKey:@"name"];
+        //        _name = [coder decodeObjectForKey:@"name"];
         unsigned int count = 0;
         Ivar* ivarList = class_copyIvarList(self.class, &count);
         
