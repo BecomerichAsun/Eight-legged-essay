@@ -9,7 +9,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Person : NSObject
+@interface Person : NSObject {
+    NSString* asunString;
+}
+
+@property (nonatomic,assign) NSString* asunName;
+
+- (void)asunCoolMethod;
+
+- (id)asunParCoolMethod;
 
 @end
 

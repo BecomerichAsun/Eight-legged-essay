@@ -14,6 +14,7 @@
 		D33ABB7F268ED19D000FBCD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D33ABB7E268ED19D000FBCD4 /* Assets.xcassets */; };
 		D33ABB82268ED19D000FBCD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D33ABB80268ED19D000FBCD4 /* LaunchScreen.storyboard */; };
 		D33ABB85268ED19D000FBCD4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D33ABB84268ED19D000FBCD4 /* main.m */; };
+		D33ABB8D268ED1AD000FBCD4 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = D33ABB8C268ED1AD000FBCD4 /* Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		D33ABB81268ED19D000FBCD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D33ABB83268ED19D000FBCD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D33ABB84268ED19D000FBCD4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D33ABB8B268ED1AD000FBCD4 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		D33ABB8C268ED1AD000FBCD4 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				D33ABB76268ED19A000FBCD4 /* SceneDelegate.m */,
 				D33ABB78268ED19A000FBCD4 /* ViewController.h */,
 				D33ABB79268ED19A000FBCD4 /* ViewController.m */,
+				D33ABB8B268ED1AD000FBCD4 /* Person.h */,
+				D33ABB8C268ED1AD000FBCD4 /* Person.m */,
 				D33ABB7B268ED19A000FBCD4 /* Main.storyboard */,
 				D33ABB7E268ED19D000FBCD4 /* Assets.xcassets */,
 				D33ABB80268ED19D000FBCD4 /* LaunchScreen.storyboard */,
@@ -147,6 +152,7 @@
 			files = (
 				D33ABB7A268ED19A000FBCD4 /* ViewController.m in Sources */,
 				D33ABB74268ED19A000FBCD4 /* AppDelegate.m in Sources */,
+				D33ABB8D268ED1AD000FBCD4 /* Person.m in Sources */,
 				D33ABB85268ED19D000FBCD4 /* main.m in Sources */,
 				D33ABB77268ED19A000FBCD4 /* SceneDelegate.m in Sources */,
 			);

@@ -25,6 +25,8 @@ class ViewController: UIViewController {
     
     var timers:DispatchSourceTimer!
     
+    var timerss: Timer!
+    
     let observer = RunLoopObserver()
     
     override func viewDidLoad() {
@@ -34,6 +36,7 @@ class ViewController: UIViewController {
 //
 //        }
 //        timer()
+        gcdTest()
     }
     
     func test() {
@@ -55,21 +58,33 @@ class ViewController: UIViewController {
     
     /// 原生计时器
     func timer() {
+
         /**
          1.子线程中添加Timer对象并正常运作，必须得实现线程保活。
          2.需要将定时器添加到当前线程的Runloop中
          3.如果需要停止线程内部工作且销毁当前线程对象，需要做一定操作
          */
         let thread = AsunThread.init {
-            let timer: Timer = Timer(fireAt: Date.init(timeIntervalSinceNow: 0), interval: 1.0, target: self, selector: #selector(self.timerMethod), userInfo: nil, repeats: true)
-            RunLoop.current.add(timer, forMode: .default)
-            while !self.isFinished {
-                RunLoop.current.run(until: Date.init(timeIntervalSinceNow: 0.0001))
-            }
-            print("来了")
+//            let timerss = Timer(fireAt: Date.init(timeIntervalSinceNow: 0), interval: 1.0, target: self, selector: #selector(self.timerMethod), userInfo: nil, repeats: true)
+////            RunLoop.current.add(timer, forMode: .default)
+////            while !self.isFinished {
+////                RunLoop.current.run(until: Date.init(timeIntervalSinceNow: 0.0001))
+////            }
+//            timerss.fire()
+//            print("来了")
         }
         
         thread.start()
+    }
+    
+    func gcdTest() {
+
+        
+        DispatchQueue.global().async {
+
+            
+        }
+        
     }
     
     @objc func timerMethod() {

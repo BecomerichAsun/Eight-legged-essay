@@ -6,6 +6,8 @@
 //
 
 #import "ViewController.h"
+#import "Person.h"
+#import <objc/runtime.h>
 
 @interface ViewController ()
 
@@ -15,7 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    Person* p = [Person alloc];
+    
+    Class pclass = object_getClass(p);
+    
 }
 
 
