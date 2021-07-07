@@ -22,7 +22,7 @@ class RunLoopObserver: NSObject {
         let cfRunloop = CFRunLoopGetCurrent()
         ///创建回调中的上下文
         var info = CFRunLoopObserverContext.init(version: 0, info: unsafeBitCast(self, to: UnsafeMutablePointer.self), retain: nil, release: nil, copyDescription: nil)
-        
+       
         /// 创建观察者
         // new create copy 在堆区开辟空间
         let observer: CFRunLoopObserver = CFRunLoopObserverCreate(nil, CFRunLoopActivity.beforeWaiting.rawValue, true, 0, loopCallBack(), &info)
@@ -34,8 +34,6 @@ class RunLoopObserver: NSObject {
     
     func loopCallBack() -> CFRunLoopObserverCallBack? {
         return { (observer, activity, point) in
-
-
             /**
              /// 获取当前页面
              let currentVc = unsafeBitCast(point, to: ViewController.self)

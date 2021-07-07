@@ -29,11 +29,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        observer.addRunloopObserver(currentObj: self, mode: .defaultMode)
-        Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { t in
-            
-        }
+//        observer.addRunloopObserver(currentObj: self, mode: .defaultMode)
+//        Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { t in
+//
+//        }
+//        timer()
     }
+    
+    func test() {
+        
+        
+    }
+
     
     /// GCD计时器
     func gcdTimer() {
